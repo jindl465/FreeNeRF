@@ -1,6 +1,6 @@
 
 Config.expname = "myexp"
-Config.checkpoint_dir = "checkpoints/dtu/origin/dtu6"
+Config.checkpoint_dir = "checkpoints/dtu/test/dtu3"
 Config.dtu_scan = "scan8"
 
 # basic configs
@@ -8,8 +8,8 @@ Config.data_dir = "Rectified"
 Config.dtu_mask_path = "submission_data/idrmasks"
 Config.dataset_loader = 'dtu'
 Config.white_background = False
-Config.near = 0.5
-Config.far = 3.5
+Config.near = 0.05
+Config.far = 1000.
 Config.factor = 4
 Config.render_factor = 4
 MLP.density_noise = 1.
@@ -24,14 +24,14 @@ Config.grad_max_val = 0.1
 
 
 # num_views dependent config
-Config.n_input_views = 6
-Config.max_steps = 87891
-Config.project = "dtu6"
+Config.n_input_views = 3
+Config.max_steps = 43945
+Config.project = "dtu3"
 
 
 # use trick or not
 Config.freq_reg = True
-Config.freq_reg_end = 61524  # int(0.7 * Config.max_steps)
+Config.freq_reg_end = 39550  # int(0.9 * Config.max_steps)
 
 Config.occ_reg_loss_mult = 0.01
 Config.occ_wb_prior = True

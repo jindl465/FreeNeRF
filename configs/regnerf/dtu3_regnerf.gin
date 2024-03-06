@@ -4,8 +4,8 @@ Config.checkpoint_dir = "out/regnerf"
 Config.dtu_scan = "scan8"
 
 # basic configs
-Config.data_dir = "data/Rectified/images"
-Config.dtu_mask_path = "data/Rectified/mask"
+Config.data_dir = "Rectified"
+Config.dtu_mask_path = "submission_data/idrmasks"
 Config.dataset_loader = 'dtu'
 Config.white_background = False
 Config.near = 0.5

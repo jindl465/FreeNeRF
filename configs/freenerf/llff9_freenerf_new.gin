@@ -1,17 +1,17 @@
 
 Config.expname = "myexp"
-Config.checkpoint_dir = "checkpoints/dtu/origin/dtu9"
-Config.dtu_scan = "scan8"
+Config.checkpoint_dir = "checkpoints/llff/test/llff9"
+Config.llff_scan = "room"
 
 # basic configs
-Config.data_dir = "Rectified"
-Config.dtu_mask_path = "submission_data/idrmasks"
-Config.dataset_loader = 'dtu'
+Config.data_dir = "nerf_llff_data"
+Config.dataset_loader = 'llff'
 Config.white_background = False
-Config.near = 0.5
-Config.far = 3.5
-Config.factor = 4
-Config.render_factor = 4
+Config.near = 0.05
+Config.far = 1000
+Config.factor = 8
+Config.render_factor = 8
+MipNerfModel.ray_shape = 'cylinder'
 MLP.density_noise = 1.
 
 # default with regnerf's learning rate setting
@@ -25,16 +25,16 @@ Config.grad_max_val = 0.1
 
 # num_views dependent config
 Config.n_input_views = 9
-Config.max_steps = 131836
-Config.project = "dtu9"
+Config.max_steps = 209303
+Config.project = "llff9"
 
 
 # use trick or not
 Config.freq_reg = True
-Config.freq_reg_end = 65918  # int(0.5 * Config.max_steps)
+Config.freq_reg_end = 104651 # int(0.5 * Config.max_steps)
 
 Config.occ_reg_loss_mult = 0.01
-Config.occ_wb_prior = True
-# regnerf techniques
-## does not use regnerf techniques
+Config.occ_reg_range = 20
+Config.occ_wb_prior = False
+
 Config.load_random_rays = False
